@@ -1,0 +1,140 @@
+.cards {
+  padding: 1em 0 2em 0.5em;
+  width: 100%;
+  transition: 500ms;
+
+  &__msg {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      background-color: $white;
+      font-size: 18px;
+      font-family: $Roboto;
+      padding: 10px 12px;
+      max-width: 60%;
+      margin-top: 3em;
+    }
+  }
+
+  &__card {
+    @include formRaduis;
+    transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 12vh;
+    width: 100%;
+    background-color: #fff;
+    margin: 1em 0;
+  }
+  &__title {
+    @include regularText;
+    margin-left: 30px;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    transform: scale(0.8);
+  }
+  &__btn {
+    padding: 5px 10px;
+    margin: 0 4px;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+  // &__icon {}
+}
+
+.start-btn {
+  background-color: $black;
+  color: $light;
+  font-family: $Roboto;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.finish-btn {
+  background-color: $white;
+  color: $dirtyPink;
+  font-family: $Roboto;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.icon-btn {
+  background-color: $white;
+  padding: 0px 4px;
+}
+
+@media screen and (min-width: $medium) {
+  .cards {
+    align-items: flex-start;
+    &__msg {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        background-color: $white;
+        font-size: 20px;
+        font-family: $Roboto;
+        padding: 10px 12px;
+        max-width: 60%;
+        margin-top: 3em;
+      }
+    }
+
+    &__card {
+      @include formRaduis;
+      height: 75px;
+      width: 85%;
+    }
+    &__title {
+      @include regularText;
+    }
+
+    &__btn {
+      padding: 7px 12px;
+      margin: 0 5px;
+      border: none;
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      transform: scale(1) translateX(-1em);
+    }
+  }
+  .start-btn {
+    background-color: $black;
+    color: $light;
+    font-family: $Roboto;
+  }
+  .finish-btn {
+    background-color: $white;
+    color: $dirtyPink;
+
+    font-family: $Roboto;
+  }
+  .icon-btn {
+    background-color: $white;
+    padding: 1.5px 4px;
+  }
+}

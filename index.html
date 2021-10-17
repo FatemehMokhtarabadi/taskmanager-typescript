@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script type="module" defer src="./scripts/build/main.js"></script>
+    <title>A Task Manager</title>
+  </head>
+  <body>
+    <div class="App">
+      <main class="container">
+        <section class="date">
+          <p class="date__day">Tuesday</p>
+          <p class="date__date">Sep 21</p>
+          <p class="date__year">2021</p>
+        </section>
+        <section class="main">
+          <form class="form">
+            <label for="search" class="form__label form__searchLabel">
+              <input
+                type=" text"
+                id="search"
+                name="search"
+                placeholder="search..."
+                class="form__searchInput"
+            /></label>
+          </form>
+          <form class="form">
+            <label for="task" class="form__label">
+              <input
+                type=" text"
+                id="task"
+                name="task"
+                placeholder="new task..."
+                class="form__input"
+            /></label>
+            <button type="submit" class="form__btn" id="addBtn">Add</button>
+          </form>
+
+          <div class="tasks">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link all" href="#">All</a>
+                </li>
+                <li class="nav__item todo">
+                  <a class="nav__link" href="#"> To do</a>
+                </li>
+                <li class="nav__item inProgress">
+                  <a class="nav__link" href="#">In progress</a>
+                </li>
+                <li class="nav__item done">
+                  <a class="nav__link" href="#"> Done</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="cards"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

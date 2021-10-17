@@ -1,0 +1,76 @@
+.date {
+  border-bottom: 1px solid $black;
+  flex: 3%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 1em 0;
+
+  &__day {
+    font-family: $Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: $white;
+    padding: 1px 5px;
+  }
+  &__date {
+    margin-left: 10px;
+    font-family: $Roboto;
+    background-color: $white;
+    padding: 1px 3px;
+  }
+  &__year {
+    display: initial;
+    font-family: $Roboto;
+    background-color: $white;
+    padding: 1px 6px;
+    margin: 0;
+  }
+  &__motiv {
+    display: none;
+    // &-name {
+    // }
+  }
+}
+
+@media screen and (min-width: $big) {
+  .date {
+    // border-bottom: none;
+    // border-left: 1px solid $black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: ;
+    // transform: translateY(-30em);
+    padding: 20px 10px;
+
+    &__day {
+      font-family: $Roboto;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    &__date {
+      font-family: $Roboto;
+      font-weight: 600;
+      padding: 1px 10px;
+    }
+    // &__year {
+    // }
+    &__motiv {
+      display: initial;
+      text-align: left;
+      font-family: $Poppins;
+      font-weight: 600;
+      @include whiteBG;
+      &-name {
+        font-size: 14px;
+        display: block;
+      }
+    }
+  }
+}
